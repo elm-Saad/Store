@@ -1,8 +1,11 @@
-
+import ProductsGrid from "./ProductsGrid"
+import SectionTitle from "./SectionTitle"
 
 const TopCollections = () => {
-    return <section>
-TopCollections
-    </section>
+    return  <div className='pt-24 '>
+    <SectionTitle text='Top Collections' center={true} />
+    <ProductsGrid />
+  </div>
 }
 export default TopCollections
+

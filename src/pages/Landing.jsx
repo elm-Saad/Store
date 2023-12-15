@@ -19,7 +19,6 @@ export const loader = (queryClient) => async () => {
 }
 
 
-
 const Landing = ()=>{
     return <>
         <Hero />

@@ -10,18 +10,17 @@ const links = [
 ]
 
 const NavLinks = ()=>{
-  // return 
+
   const user = useSelector((state) => state.userState.user)
 
 
     return <>
     {links.map((link) => {
         const { id, url, text } = link
-        // just hiding for the navbar
         if ((url === 'checkout' || url === 'orders') && !user) return null
         return (
           <li key={id}>
-            <NavLink className='capitalize' to={url}>
+            <NavLink className='capitalize py-2 my-2' to={url}>
               {text}
             </NavLink>
           </li>

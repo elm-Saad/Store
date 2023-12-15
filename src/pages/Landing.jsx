@@ -1,5 +1,5 @@
-import { Hero } from "../component"
-import FeaturedProducts from "../component/FeaturedProducts"
+import { Hero,FeaturedProducts ,TopCollections} from "../component"
+
 import { customFetch } from "../utils"
 
 const url = '/products?featured=true'
@@ -18,6 +18,7 @@ export const loader = (queryClient) => async () => {
 const Landing = ()=>{
     return <>
         <Hero />
+        <TopCollections />
         <FeaturedProducts />
     </>
 }

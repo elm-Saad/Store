@@ -1,5 +1,5 @@
 import { Outlet, useNavigation } from 'react-router-dom'
-import { Navbar, Loading, Header } from '../component'
+import { Navbar, Loading, Header, Footer } from '../component'
 
 
 const HomeLayout = ()=> {
@@ -12,10 +12,11 @@ const HomeLayout = ()=> {
         {isPageLoading ? (
             <Loading />
         ) : (
-            <section className='align-elm py-12'>
+            <section className='align-elm py-4'>
                 <Outlet />
             </section>
         )}
+        <Footer />
     </>
 }
 

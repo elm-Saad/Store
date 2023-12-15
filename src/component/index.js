@@ -1,3 +1,6 @@
+export {default as FeaturedProducts} from './FeaturedProducts'
+export { default as TopCollections } from './TopCollections'
+export {default as Footer } from './Footer'
 export { default as FormInput } from './FormInput'
 export { default as SubmitBtn } from './SubmitBtn'
 export { default as Header } from './Header'

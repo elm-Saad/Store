@@ -50,7 +50,6 @@ const Landing = ()=>{
                 </div>
             </section>
         </article>
-        
     </>
 }
 

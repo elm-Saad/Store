@@ -52,44 +52,16 @@ export const loader =
         return null
     }
 }
-// export const loader =
-// (store,queryClient) =>
-// async ({ request }) => {
-// const user = store.getState().userState.user
 
-// if (!user) {
-//     toast.warn('You must be logged in to view orders')
-//     return redirect('/login')
-// }
-// const params = Object.fromEntries([
-//     ...new URL(request.url).searchParams.entries(),
-// ])
-// try {
-//     // get your uniq orders
-//     const response = await customFetch.get('/orders', {
-//     params,
-//     headers: {
-//         Authorization: `Bearer ${user.token}`,
-//     },
-//     })
-
-//     return { orders: response.data.data, meta: response.data.meta }
-// } catch (error) {
-//     console.log(error)
-//     const errorMessage =
-//     error?.response?.data?.error?.message ||
-//     'there was an error accessing your orders'
-
-//     toast.error(errorMessage)
-//     if (error?.response?.status === 401 || 403) return redirect('/login')
-
-//     return null
-// }
-// }
 const Orders = () => {
 const { meta } = useLoaderData()
 if (meta.pagination.total < 1) {
-    return <SectionTitle text='Please make an order' />
+    return <section className='min-h-[22rem]'>
+    <SectionTitle text='Please make an order' />
+    <p className='min-h-[20rem] flex items-center justify-center'>
+      <img src={VoidImg} alt="Void" className='h-[15rem] object-cover' /> 
+    </p>
+  </section>
 }
 return (
     <>

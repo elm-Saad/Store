@@ -1,27 +1,19 @@
+import hero1 from '../assets/4.webp'
 
 
 const About = ()=>{
     return (
-        <>
-          <div className='flex flex-wrap gap-2 sm:gap-x-6 items-center justify-center'>
-            <h1 className='text-4xl font-bold leading-none tracking-tight sm:text-6xl '>
-              We love
-            </h1>
-            <div className='stats bg-primary shadow'>
-              <div className='stat'>
-                <div className='stat-title text-primary-content text-4xl font-bold tracking-widest'>
-                  comfy
-                </div>
+        <section className="min-h-[25rem] flex items-center justify-center">
+          <div className="hero">
+            <div className="hero-content flex-col lg:flex-row">
+              <img src={hero1} className="max-w-sm h-72 rounded-lg shadow-2xl" />
+              <div>
+                <h1 className="text-5xl font-bold">Box Office News!</h1>
+                <p className="py-6 max-w-2xl">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
               </div>
             </div>
           </div>
-          <p className='mt-6 text-lg leading-8 max-w-2xl mx-auto'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic veniam
-            odit, officiis eos mollitia alias, doloremque, aspernatur ratione
-            asperiores voluptas labore minus dolores reprehenderit corporis quos.
-            Assumenda molestias harum dignissimos?
-          </p>
-        </>
+        </section>
     )
 }
 

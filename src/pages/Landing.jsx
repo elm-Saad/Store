@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
-import { Hero,FeaturedProducts ,TopCollections} from "../component"
-
+import { Hero,TopCollections} from "../component"
 import { customFetch } from "../utils"
 
-import image from '../assets/main.webp'
+import image from '../assets/hero4.webp'
 
-const url = '/products?featured=true'
+// const url = '/products?featured=true'
+const url = '/products?search=&category=Tables&company=all&order=a-z&price=100000'
 
 const featuredProductsQuery = {
     queryKey: ['featuredProducts'],
@@ -28,8 +28,8 @@ const Landing = ()=>{
             <img src={image} alt="" className="h-full w-full object-none rounded-lg " />
 
             <div className="absolute top-1/2 left-8 -translate-y-1/2 text-center sm:text-start">
-                <h2 className="text-2xl font-bold my-2">HURRY UP!</h2>
-                <p className="text-2xl font-bold my-2 opacity-50">HOT DEAL! SALE 40% EXTRA OFF</p>
+                <h2 className="text-2xl font-bold my-2 text-primary">HURRY UP!</h2>
+                <p className="text-2xl font-bold my-2 opacity-80 text-primary">HOT DEAL! SALE 40% EXTRA OFF</p>
                 <Link 
                     to={'/products/6'}
                     className="btn btn-primary uppercase my-4"

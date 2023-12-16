@@ -8,7 +8,7 @@ const Hero = () => {
           <div className='relative h-[30rem] w-full space-x-4'>
             <Carousel />
             <div className='absolute top-1/2 left-8 -translate-y-1/2 text-center sm:text-start'>
-              <h1 className=' max-w-xl text-4xl font-bold tracking-tight  sm:text-6xl'>
+              <h1 className='text-gray-700 max-w-xl text-4xl font-bold tracking-tight  sm:text-6xl'>
                 We’re changing the way people shop.
               </h1>
   

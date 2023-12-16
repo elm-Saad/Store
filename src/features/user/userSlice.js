@@ -2,8 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 import { toast } from 'react-toastify'
 
 const themes = {
-  light: 'light',
-  dark: 'dark',
+  light: 'corporate',
+  dark: 'business',
 };
 
 const getThemeFromLocalStorage = () => {

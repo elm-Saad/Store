@@ -1,14 +1,25 @@
 import { useLoaderData } from 'react-router-dom'
 import ProductsGrid from './ProductsGrid'
 import ProductsList from './ProductsList'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BsFillGridFill, BsList } from 'react-icons/bs'
 
+
+const getFromLocalStorage = () =>{
+  return localStorage.getItem('layout') || 'grid'
+}
+
+const setToLocalStorage = (layout) => {
+  localStorage.setItem('layout',layout)
+}
 const ProductsContainer = () => {
   const { meta } = useLoaderData()
   const totalProducts = meta.pagination.total
-  const [layout, setLayout] = useState('grid')
+  const [layout, setLayout] = useState(getFromLocalStorage())
 
+  useEffect(()=>{
+    setToLocalStorage(layout)
+  },[layout])
   const setActiveStyles = (pattern) => {
     return `text-xl btn btn-circle btn-sm ${
       pattern === layout

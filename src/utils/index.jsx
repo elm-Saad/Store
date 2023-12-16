@@ -18,7 +18,6 @@ export const formatPrice = (price) => {
 }
 
 //Sequence generator (range)
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from#calling_from_on_non-array_constructors
 
 export const generateAmountOptions = (number) => {
   return Array.from({ length: number }, (_, index) => {
@@ -31,6 +30,4 @@ export const generateAmountOptions = (number) => {
     )
   })
 }
-
-//range(0, 4, 1)
 

@@ -2,7 +2,7 @@ import { Link, useLoaderData } from 'react-router-dom'
 import { formatPrice } from '../utils'
 
 
-const ProductsGrid = () => {
+const ProductsGrid = ({TopCollections=false}) => {
     // cause its part of the landing page witch hold the loader 
   const { products } = useLoaderData()
 
@@ -11,10 +11,13 @@ const ProductsGrid = () => {
       {products.map((product) => {
         const { title, price, image } = product.attributes
         const dollarsAmount = formatPrice(price)
+        let id = TopCollections ? (product.id + 1) : product.id
+        console.log(TopCollections)
+        console.log(title,id,product.id)
         return (
           <Link
-            key={product.id}
-            to={`/products/${product.id}`}
+            key={id}
+            to={`/products/${id}`}
             className='card w-full shadow-xl hover:shadow-2xl transition duration-300 group '
           >
             <figure className='px-4 pt-4'>

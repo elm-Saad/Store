@@ -62,16 +62,16 @@ const Carousel = () => {
           }}
         >
           <div className='relative h-full w-full'>
-              <img src={item.image} alt={item.alt} className='w-full h-full bg-cover' />
+              <img src={item.image} alt={item.alt} className='w-full h-full bg-cover object-cover' />
               
               <button 
-                className='p-1 absolute left-4 top-1/2 transition bg-white opacity-50 hover:opacity-70  text-black rounded-full'
+                className='hidden md:block p-1 absolute left-4 top-1/2 transition bg-white opacity-50 hover:opacity-70  text-black rounded-full'
                 onClick={()=>prevSlide()}
               >
               <FiChevronLeft className='w-6 h-6 ' />
               </button>
               <button 
-                className='p-1 absolute right-4 top-1/2 transition bg-white opacity-50 hover:opacity-70 text-black rounded-full'
+                className='hidden md:block p-1 absolute right-4 top-1/2 transition bg-white opacity-50 hover:opacity-70 text-black rounded-full'
                 onClick={()=>nextSide()}
 
               >
